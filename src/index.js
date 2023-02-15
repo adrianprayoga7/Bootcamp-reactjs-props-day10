@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//render function dari render.js
+import renderId from "./render";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//component html nav
+const nav = 
+<nav class="navbar navbar-expand-lg navbar-white bg-white">
+<h2>BOOTCAMP Batch 1 : Experiment with REACTJS</h2>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse  justify-content-end d-flex" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#top">home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#top">about</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#top">contacts</a>
+    </li>
+  </ul>
+</div>
+</nav>
+
+//component html element
+const element = <h1>This is React</h1>
+
+//mengambil function dari render.js
+//mengambil component dari html 
+renderId(nav,("nav"));  
+renderId(element,("root"));  
+
