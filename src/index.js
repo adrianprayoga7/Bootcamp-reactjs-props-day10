@@ -8,6 +8,7 @@ import 'semantic-ui-css/semantic.min.css';
 const el = document.getElementById("root");
 const root = ReactDOM.createRoot(el);
 
+//membuat variable data untuk inisialisasi objek
 function App () {
     const data = [
       {
@@ -23,7 +24,10 @@ function App () {
       comment : faker.lorem.lines()
     }
   ];
+
+
   // console.log(data);
+  //membuat tampilan untuk di return menggunakan semantic
   return (
   data.map((datas, i) => {
     return (
@@ -44,7 +48,7 @@ function App () {
 
 
 
-
+//merender fungsi App
 root.render(<App />);
 
  
